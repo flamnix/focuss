@@ -7,8 +7,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:focuss/counter/counter.dart';
+import 'package:focuss/hosts/hosts.dart';
+import 'package:focuss/hosts/io/hosts_reader.dart';
+import 'package:focuss/hosts/io/hosts_writer.dart';
 import 'package:focuss/l10n/l10n.dart';
+import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -27,7 +30,7 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: HostsPage(),
     );
   }
 }
